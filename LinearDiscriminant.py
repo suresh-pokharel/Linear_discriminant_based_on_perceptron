@@ -1,6 +1,5 @@
 
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
 from numpy import genfromtxt
 
@@ -36,7 +35,7 @@ class LinearDiscriminant:
         # plt.show()
 
     def train(self):
-        epochs = 100
+        epochs = 1
         for i in range(epochs):
             for inputs in self.data:
                 prediction = self.predict(inputs)
@@ -60,14 +59,10 @@ class LinearDiscriminant:
         # fig config
         weights = self.weights
         print(weights)
-        weights = [ 54.32548751, -55.73517894,  25.22175294]
+        # weights = [ 3.38611655 -1.71806437  0.28208555]
+        # slope - -->1.9708903864608038
+        # intercept - -->0.1641880001947051
         inputs = self.data
-        # plt.figure(figsize=(10, 6))
-
-        # plot input samples(2D data points) and i have two classes.
-        # one is +1 and second one is -1, so it red color for +1 and blue color for -1
-        #for input, target in zip(inputs, targets):
-           # plt.plot(input[0], input[1], 'ro' if (target == 1.0) else 'bo')
 
         # calculating slope and intercept with given three weights
         slope = -(weights[2] / weights[1]) / (weights[2] / weights[0])

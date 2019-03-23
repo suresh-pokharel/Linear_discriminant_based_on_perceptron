@@ -9,7 +9,7 @@ class LinearDiscriminant:
         self.data = []
         self.threshold = threshold
         self.learning_rate = learning_rate
-        self.weights = np.random.uniform(-0.5, 0.5, no_of_inputs + 1)
+        self.weights = np.random.uniform(-0.0, 0.1, no_of_inputs + 1)
 
     def load_data(self):
         # load data from file
@@ -59,9 +59,9 @@ class LinearDiscriminant:
         # fig config
         weights = self.weights
         print(weights)
-        # weights = [ 3.38611655 -1.71806437  0.28208555]
-        # slope - -->1.9708903864608038
-        # intercept - -->0.1641880001947051
+        # weights = [ 2.09611655, -1.91806437,  0.28208555]
+        # slope - -->1.0928290951987185
+        # intercept - -->0.1470678223379959
         inputs = self.data
 
         # calculating slope and intercept with given three weights
